@@ -1,0 +1,22 @@
+<!-- The routed views render in the <router-outlet>-->
+<!-- <app-header></app-header> -->
+<!-- <app-home></app-home> -->
+<!-- <div class="container-fluid">
+  <app-header></app-header>
+  <app-login></app-login>
+  <app-footer></app-footer>
+</div> -->
+
+<button (click)="loadCourses()" >Load</button>
+<ul>
+  <li *ngFor="let course of courses; tackBy: trackCourse">
+    {{course.name}}
+  </li>
+</ul>
+
+<span class="glyphicon"
+    [ngClass]="{
+      'glyphicon-star':isSelected,
+      'glyphicon-star-empty':!isSelected
+    }"
+></span>
